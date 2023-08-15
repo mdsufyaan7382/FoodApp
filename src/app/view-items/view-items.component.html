@@ -1,0 +1,26 @@
+	<h1>Below List Of Items Available!!!</h1>
+	<a href="adminLoginHomePage"><button class="btn btn-primary">Back</button></a>&nbsp;&nbsp;
+	<a href="add"><button class="btn btn-success">Add New Item</button></a>
+	<hr />
+	<div style="width:800px">
+	<table class="table table-striped">
+		<tr>
+			<th>Item No.</th>
+			<th>Item Name</th>
+			<th>Item Price</th>
+			<th>Update</th>
+			<th>Delete</th>
+		</tr>
+		<tr *ngFor="let b of menu">
+		
+            <td>{{b.itemid}}</td>
+            <td>{{b.itemname}}</td>
+            <td>{{b.itemprice}}</td>
+				<td>
+					<button routerLink="/update/{{b.itemid}}"class="btn btn-success btn-sm">Update</button></td>
+				<!-- <td><a (click)="delete(b.itemid)">Delete</a></td> -->
+				<td><button (click)="delete(b.itemid)"class="btn btn-danger btn-sm">Delete</button></td>
+			</tr>		
+	</table>
+	</div>
+

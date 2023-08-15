@@ -1,0 +1,34 @@
+<!-- <h1>Update Menu Item</h1>
+<hr />
+<div class = "container">
+    <form (ngSubmit)="updateItemDetails()">
+        Item Id:<input type="text" [(ngModel)]="menu.itemid" name="itemid" /><br>
+        Item Name:<input type="text" [(ngModel)]="menu.itemname" name="itemname" /><br>
+        Item Price:<input type="text" [(ngModel)]="menu.itemprice" name="itemprice" /><br>
+        <button type="submit">UPDATE</button>
+    </form>
+</div> -->
+
+<h1>Update the Menu Item</h1>
+<a href="view"><button class="btn btn-primary">Back</button></a>
+<hr />
+<div class = "container">
+    <form (ngSubmit)="updateItemDetails()">
+        <tr>
+            <td>ItemId</td>
+            <td><input type="text" [(ngModel)]="menu.itemid" name="itemid" /></td>
+        </tr>
+        <tr>
+            <td>ItemName</td>
+            <td><input type="text" [(ngModel)]="menu.itemname" name="itemname" /></td>
+        </tr>
+        <tr>
+            <td>ItemPrice</td>
+            <td><input type="text" [(ngModel)]="menu.itemprice" name="itemprice" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="update" /></td>
+        </tr>
+    </form>
+</div>

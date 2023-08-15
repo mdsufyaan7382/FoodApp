@@ -1,0 +1,22 @@
+	<body>
+	<h2>Admin Login</h2>
+	<hr />
+		<form (ngSubmit) ="checkAdminLogin()" >
+			<div class="imgcontainer">
+				<img src="./assets/image/img_admin.png" alt="Admin" class="admin">
+			  </div>
+
+			  <div class="lcontainer">
+
+			  <label for="uname"><b>Username</b></label>	
+				<input type="text" [(ngModel)]="admin.username"  name="username">
+                
+				<label for="psw"><b>Password</b></label>
+				<input type="password" [(ngModel)]="admin.password"  name="password">
+			
+				<input type="submit" class="btn" value="Login" />
+			
+			<a href="home"><button type="button" class="cancelbtn">Cancel</button></a>
+		</div>
+		</form>
+	</body>

@@ -1,0 +1,29 @@
+
+<h2>UserLogin Form</h2>
+<form (ngSubmit) ="checkLogin()" #loginForm="ngForm">
+  <div class="imgcontainer">
+    <img src="./assets/image/img_avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="lcontainer">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" [(ngModel)]="login.username" name="username" required #name="ngModel" id="username"/>
+    <div id="usernameErrors" *ngIf="name.invalid && (name.touched || name.dirty)">
+      <span *ngIf="name.errors?.['required']">This field required</span>
+      <!-- <span *ngIf="name.errors?.pattern">Please enter a valid email pattern</span> -->
+
+  </div>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" [(ngModel)]="login.password" name="password" required #password="ngModel" id="password"/>
+    <div id="passwordErrors" *ngIf="password.invalid && (password.touched || password.dirty)">
+        <span *ngIf="password.errors?.['required']">This field required</span>
+        <!-- <span *ngIf="password.errors?.['pattern']">This field should have min of 5 char and 1 alphabet, 1 numeric and atleast 1 special char</span> -->
+    </div>
+        
+    <input type="submit" class="btn" value="Log in" id="submitButton" [disabled]="loginForm.invalid" />
+  </div>
+
+    <a href="home"><button type="button" class="cancelbtn">Cancel</button></a>
+   
+</form>

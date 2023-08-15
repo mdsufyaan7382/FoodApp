@@ -1,0 +1,23 @@
+	<h1>Below List Of Items Available!!!</h1>
+	<a href="userLoginHomePage"><button class="btn btn-primary"> Back</button></a>&nbsp;&nbsp;
+	<a href="cartview"><button class="btn btn-success">Go to Order details</button></a>
+	<hr />
+	<div style="width: 800px">
+		<table class="table table-striped">
+			<tr>
+				<th>Item No.</th>
+				<th>Item Name</th>
+				<th>Item Price</th>
+				<th>Add To Order</th>
+			</tr>
+			<tr *ngFor="let b of menu">
+		
+				<td>{{b.itemid}}</td>
+				<td>{{b.itemname}}</td>
+				<td>{{b.itemprice}}</td>
+					
+					<td><button (click)="addtocart(b)" class="btn btn-success btn-sm">Add To Order</button></td>
+				</tr>
+		</table>
+	</div>
+

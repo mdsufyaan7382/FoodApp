@@ -1,0 +1,35 @@
+
+	<h1>Update the User Information</h1>
+	<a href="viewUser"><button class="btn btn-primary">Back</button></a>
+	<hr />
+	<div>
+		<form (ngSubmit)="updatedUserValue()">
+			<tr>
+				<td>User ID</td>
+				<td><input type="text" [(ngModel)]="user.userid" name="userid" /></td>
+			</tr>
+			<tr>
+				<td>User Name</td>
+				<td><input type="text" [(ngModel)]="user.username" name="username" /></td>
+			</tr>
+			<tr>
+				<td>Email ID</td>
+				<td><input type="text" [(ngModel)]="user.emailid" name="emailid" /></td>
+			</tr>
+			<tr>
+				<td>Mobile No.</td>
+				<td><input type="text" [(ngModel)]="user.mobile" name="mobile" /></td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" [(ngModel)]="user.address" name="address" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" [(ngModel)]="user.password" name="password" /></td>
+			</tr>
+			<td><input type="submit" value="update" /></td>
+			
+			<tr></tr>
+		</form>
+	</div>	

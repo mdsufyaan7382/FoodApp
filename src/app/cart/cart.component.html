@@ -1,0 +1,27 @@
+<h1>Order Detail</h1>
+	<a href="userLoginHomePage"><button class="btn btn-info">Go To Home</button></a>&nbsp;&nbsp;&nbsp;
+	<a href="showUserMenuItems"><button class="btn btn-primary">Go To Menu Item</button></a>
+	<hr />
+	<div style="width: 800px">
+		<table class="table table-striped">
+			<tr>
+			    <th>Sr. No</th>
+				<th>Item Name</th>
+				<th>Item Price</th>
+				<th>Quantity</th>
+				<th>Sub Total</th>
+				<th>Remove</th>
+
+			</tr>
+			<tr *ngFor="let b of cart; index as i">
+				    <td>{{i+1}}</td>
+					<td>{{b.itemname}}</td>
+					<td>{{b.itemprice}}</td>
+					<td>{{b.quantity}}</td>
+					<td>{{b.itemprice * b.quantity}}</td>
+					<!-- <td><a (click)="deleteCartItems(b.id)">Delete</a></td> -->
+					<td><button (click)="deleteCartItems(b.id)"class="btn btn-danger btn-sm">Delete</button></td>
+				</tr>
+		</table>
+	</div>
+	

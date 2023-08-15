@@ -1,0 +1,33 @@
+<h1>Add Menu Item</h1>
+<a href="view"><button type="button" class="btn btn-primary btn-sm">Back</button></a>
+
+<hr />
+<!-- <div class = "container">
+    <form (ngSubmit)="getMenuItemDetails()">
+        Item Id:<input type="text" [(ngModel)]="menu.itemid" name="itemid" /><br>
+        Item Name:<input type="text" [(ngModel)]="menu.itemname" name="itemname" /><br>
+        Item Price:<input type="text" [(ngModel)]="menu.itemprice" name="itemprice" /><br>
+        <button type="submit">ADD</button>
+    </form>
+</div> -->
+<div>
+    <form (ngSubmit)="getMenuItemDetails()">
+        <tr>
+            <td>Item No.</td>
+            <td><input type="text" [(ngModel)]="menu.itemid" name="itemid" /></td>
+        </tr>
+        <tr>
+            <td>Item Name</td>
+            <td><input type="text" [(ngModel)]="menu.itemname" name="itemname" /></td>
+        </tr>
+        <tr>
+            <td>Item Price</td>
+            <td><input type="text" [(ngModel)]="menu.itemprice" name="itemprice" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="ADD" /></td>
+            
+        </tr>
+    </form>
+</div>
